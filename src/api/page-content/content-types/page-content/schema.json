@@ -1,0 +1,66 @@
+{
+  "kind": "singleType",
+  "collectionName": "page_contents",
+  "info": {
+    "singularName": "page-content",
+    "pluralName": "page-contents",
+    "displayName": "Page Content",
+    "description": "Manage static page content like hero sections, about text, etc."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string",
+      "required": false
+    },
+    "heroSubtitle": {
+      "type": "text",
+      "required": false
+    },
+    "heroImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "aboutTitle": {
+      "type": "string",
+      "required": false
+    },
+    "aboutDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "aboutImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "welcomeMessage": {
+      "type": "richtext",
+      "required": false
+    },
+    "welcomeImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "visionStatement": {
+      "type": "text",
+      "required": false
+    },
+    "missionStatement": {
+      "type": "text",
+      "required": false
+    },
+    "contactInfo": {
+      "type": "json",
+      "required": false
+    }
+  }
+}

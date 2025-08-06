@@ -1,0 +1,78 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": false
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    },
+    "category": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "capacity": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "instructor": {
+      "type": "string"
+    },
+    "duration": {
+      "type": "string"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "whatToExpect": {
+      "type": "json"
+    },
+    "prerequisites": {
+      "type": "json"
+    },
+    "schedule": {
+      "type": "json"
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "blocks": {
+      "type": "blocks"
+    }
+  }
+}

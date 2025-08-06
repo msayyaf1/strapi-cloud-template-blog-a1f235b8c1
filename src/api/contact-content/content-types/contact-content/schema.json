@@ -1,0 +1,53 @@
+{
+  "kind": "singleType",
+  "collectionName": "contact_contents",
+  "info": {
+    "singularName": "contact-content",
+    "pluralName": "contact-contents",
+    "displayName": "Contact Content",
+    "description": "Manage contact page content and information"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "required": false,
+      "default": "Contact Us"
+    },
+    "pageDescription": {
+      "type": "text",
+      "required": false
+    },
+    "address": {
+      "type": "text",
+      "required": false
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": false
+    },
+    "email": {
+      "type": "email",
+      "required": false
+    },
+    "workingHours": {
+      "type": "json",
+      "required": false
+    },
+    "mapCoordinates": {
+      "type": "json",
+      "required": false
+    },
+    "socialMedia": {
+      "type": "json",
+      "required": false
+    },
+    "contactFormText": {
+      "type": "richtext",
+      "required": false
+    }
+  }
+}

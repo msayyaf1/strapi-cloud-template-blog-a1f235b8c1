@@ -1,0 +1,87 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shop_rental_forms",
+  "info": {
+    "singularName": "shop-rental-form",
+    "pluralName": "shop-rental-forms",
+    "displayName": "Shop Rental Form",
+    "description": "Shop rental application form submissions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "businessType": {
+      "type": "string",
+      "required": true
+    },
+    "businessDescription": {
+      "type": "text",
+      "required": true
+    },
+    "duration": {
+      "type": "enumeration",
+      "enum": [
+        "Daily",
+        "Weekly",
+        "Monthly",
+        "Seasonal",
+        "Yearly"
+      ],
+      "required": true
+    },
+    "preferredSpace": {
+      "type": "enumeration",
+      "enum": [
+        "Traditional Crafts Corner",
+        "Heritage Café Spot",
+        "Cultural Exhibition Space",
+        "Pop-up Market Stall"
+      ],
+      "required": true
+    },
+    "additionalRequirements": {
+      "type": "text"
+    },
+    "experience": {
+      "type": "text",
+      "required": true
+    },
+    "startDate": {
+      "type": "date",
+      "required": true
+    },
+    "submittedAt": {
+      "type": "datetime",
+      "default": "${new Date()}"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "reviewed",
+        "contacted",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    }
+  }
+}

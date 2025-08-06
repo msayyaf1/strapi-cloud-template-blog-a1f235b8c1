@@ -1,0 +1,43 @@
+{
+  "kind": "singleType",
+  "collectionName": "media_contents",
+  "info": {
+    "singularName": "media-content",
+    "pluralName": "media-contents",
+    "displayName": "Media Content",
+    "description": "Manage photo galleries and news articles for the media page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "pageTitle": {
+      "type": "string",
+      "required": false,
+      "default": "Media Gallery"
+    },
+    "pageDescription": {
+      "type": "text",
+      "required": false
+    },
+    "photoGallery": {
+      "type": "json",
+      "required": false
+    },
+    "featuredImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "newsArticles": {
+      "type": "json",
+      "required": false
+    },
+    "galleryCategories": {
+      "type": "json",
+      "required": false
+    }
+  }
+}

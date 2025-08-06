@@ -1,0 +1,86 @@
+{
+  "kind": "collectionType",
+  "collectionName": "venue_booking_forms",
+  "info": {
+    "singularName": "venue-booking-form",
+    "pluralName": "venue-booking-forms",
+    "displayName": "Venue Booking Form",
+    "description": "Event venue booking form submissions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "eventType": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Wedding",
+        "Corporate Event",
+        "Cultural Celebration",
+        "Private Party",
+        "Photo Shoot",
+        "Conference",
+        "Workshop",
+        "Other"
+      ]
+    },
+    "eventDate": {
+      "type": "date",
+      "required": true
+    },
+    "guestCount": {
+      "type": "string",
+      "required": true
+    },
+    "preferredVenue": {
+      "type": "enumeration",
+      "required": true,
+      "enum": [
+        "Al Jazeera Al Hamra Fort",
+        "Baraha",
+        "Houses",
+        "Majlis",
+        "Abdul Kareem House"
+      ]
+    },
+    "eventDescription": {
+      "type": "text",
+      "required": true
+    },
+    "specialRequirements": {
+      "type": "text"
+    },
+    "submittedAt": {
+      "type": "datetime",
+      "default": "2025-08-13T20:45:00.000Z"
+    },
+    "status": {
+      "type": "enumeration",
+      "default": "pending",
+      "enum": [
+        "pending",
+        "reviewed",
+        "contacted",
+        "completed"
+      ]
+    }
+  }
+}

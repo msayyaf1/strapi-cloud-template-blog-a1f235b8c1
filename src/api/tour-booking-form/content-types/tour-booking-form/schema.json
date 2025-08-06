@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tour_booking_forms",
+  "info": {
+    "singularName": "tour-booking-form",
+    "pluralName": "tour-booking-forms",
+    "displayName": "Tour Booking Form",
+    "description": "Guided tour booking form submissions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "contactNumber": {
+      "type": "string",
+      "required": true
+    },
+    "totalGuests": {
+      "type": "string",
+      "required": true
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "time": {
+      "type": "time",
+      "required": true
+    },
+    "submittedAt": {
+      "type": "datetime",
+      "default": "${new Date()}"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "reviewed",
+        "contacted",
+        "confirmed",
+        "completed",
+        "cancelled"
+      ],
+      "default": "pending"
+    }
+  }
+}

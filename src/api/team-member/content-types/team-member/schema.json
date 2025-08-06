@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "Team Member",
+    "description": "Heritage village team members"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "position": {
+      "type": "string",
+      "required": true
+    },
+    "bio": {
+      "type": "text",
+      "required": true
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "displayOrder": {
+      "type": "integer",
+      "required": false,
+      "default": 1
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": false
+    },
+    "department": {
+      "type": "enumeration",
+      "enum": [
+        "Management",
+        "Operations", 
+        "Education & Community",
+        "Content & Media",
+        "Maintenance",
+        "Administration",
+        "Visitor Experience"
+      ],
+      "required": false
+    }
+  }
+}
