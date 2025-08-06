@@ -758,6 +758,7 @@ export interface ApiTourBookingFormTourBookingForm
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     date: Schema.Attribute.Date & Schema.Attribute.Required;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
     firstName: Schema.Attribute.String & Schema.Attribute.Required;
     lastName: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
@@ -778,8 +779,7 @@ export interface ApiTourBookingFormTourBookingForm
       ]
     > &
       Schema.Attribute.DefaultTo<'pending'>;
-    submittedAt: Schema.Attribute.DateTime &
-      Schema.Attribute.DefaultTo<'${new Date()}'>;
+    submittedAt: Schema.Attribute.DateTime;
     time: Schema.Attribute.Time & Schema.Attribute.Required;
     totalGuests: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
