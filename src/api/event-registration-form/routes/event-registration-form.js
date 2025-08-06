@@ -1,9 +1,11 @@
-'use strict';
+"use strict";
 
 /**
  * event-registration-form router
  */
 
-const { createCoreRouter } = require('@strapi/strapi').factories;
+const { createCoreRouter } = require("@strapi/strapi").factories;
 
-module.exports = createCoreRouter('api::event-registration-form.event-registration-form');
+module.exports = createCoreRouter(
+  "api::event-registration-form.event-registration-form"
+);

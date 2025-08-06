@@ -1,9 +1,11 @@
-'use strict';
+"use strict";
 
 /**
  * event-registration-form service
  */
 
-const { createCoreService } = require('@strapi/strapi').factories;
+const { createCoreService } = require("@strapi/strapi").factories;
 
-module.exports = createCoreService('api::event-registration-form.event-registration-form');
+module.exports = createCoreService(
+  "api::event-registration-form.event-registration-form"
+);
