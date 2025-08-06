@@ -25,8 +25,7 @@
       "required": true
     },
     "companyName": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "contactNumber": {
       "type": "string",
@@ -45,8 +44,7 @@
       "required": true
     },
     "submittedAt": {
-      "type": "datetime",
-      "default": "${new Date()}"
+      "type": "datetime"
     },
     "status": {
       "type": "enumeration",

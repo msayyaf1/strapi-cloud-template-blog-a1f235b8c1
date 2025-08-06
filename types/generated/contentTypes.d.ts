@@ -500,7 +500,7 @@ export interface ApiFilmingBookingFormFilmingBookingForm
     draftAndPublish: true;
   };
   attributes: {
-    companyName: Schema.Attribute.String & Schema.Attribute.Required;
+    companyName: Schema.Attribute.String;
     contactNumber: Schema.Attribute.String & Schema.Attribute.Required;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -521,8 +521,7 @@ export interface ApiFilmingBookingFormFilmingBookingForm
       ['pending', 'reviewed', 'contacted', 'approved', 'rejected']
     > &
       Schema.Attribute.DefaultTo<'pending'>;
-    submittedAt: Schema.Attribute.DateTime &
-      Schema.Attribute.DefaultTo<'${new Date()}'>;
+    submittedAt: Schema.Attribute.DateTime;
     time: Schema.Attribute.Time & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
