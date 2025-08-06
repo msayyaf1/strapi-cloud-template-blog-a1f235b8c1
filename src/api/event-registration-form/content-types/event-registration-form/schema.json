@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_registration_forms",
+  "info": {
+    "singularName": "event-registration-form",
+    "pluralName": "event-registration-forms",
+    "displayName": "Event Registration Form",
+    "description": "Event registration form submissions for heritage village events"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "additionalGuests": {
+      "type": "integer",
+      "required": true,
+      "default": 0,
+      "min": 0,
+      "max": 10
+    },
+    "eventSlug": {
+      "type": "string",
+      "required": true
+    },
+    "eventTitle": {
+      "type": "string",
+      "required": true
+    },
+    "submittedAt": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "confirmed",
+        "attended",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "specialRequests": {
+      "type": "text"
+    }
+  }
+}

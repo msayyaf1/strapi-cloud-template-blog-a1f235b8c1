@@ -441,6 +441,57 @@ export interface ApiContactContentContactContent
   };
 }
 
+export interface ApiEventRegistrationFormEventRegistrationForm
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'event_registration_forms';
+  info: {
+    description: 'Event registration form submissions for heritage village events';
+    displayName: 'Event Registration Form';
+    pluralName: 'event-registration-forms';
+    singularName: 'event-registration-form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    additionalGuests: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMax<
+        {
+          max: 10;
+          min: 0;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<0>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    eventSlug: Schema.Attribute.String & Schema.Attribute.Required;
+    eventTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    firstName: Schema.Attribute.String & Schema.Attribute.Required;
+    lastName: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::event-registration-form.event-registration-form'
+    > &
+      Schema.Attribute.Private;
+    phoneNumber: Schema.Attribute.String & Schema.Attribute.Required;
+    publishedAt: Schema.Attribute.DateTime;
+    specialRequests: Schema.Attribute.Text;
+    status: Schema.Attribute.Enumeration<
+      ['pending', 'confirmed', 'attended', 'cancelled']
+    > &
+      Schema.Attribute.DefaultTo<'pending'>;
+    submittedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiEventEvent extends Struct.CollectionTypeSchema {
   collectionName: 'events';
   info: {
@@ -1403,6 +1454,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
       'api::contact-content.contact-content': ApiContactContentContactContent;
+      'api::event-registration-form.event-registration-form': ApiEventRegistrationFormEventRegistrationForm;
       'api::event.event': ApiEventEvent;
       'api::filming-booking-form.filming-booking-form': ApiFilmingBookingFormFilmingBookingForm;
       'api::global.global': ApiGlobalGlobal;
