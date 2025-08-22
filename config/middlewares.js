@@ -1,39 +1,39 @@
 module.exports = [
-  'strapi::logger',
-  'strapi::errors',
+  "strapi::logger",
+  "strapi::errors",
   {
-    name: 'strapi::security',
+    name: "strapi::security",
     config: {
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          'connect-src': ["'self'", 'https:'],
-          'img-src': [
+          "connect-src": ["'self'", "https:"],
+          "img-src": [
             "'self'",
-            'data:',
-            'blob:',
-            'storage.googleapis.com', // For Strapi Cloud storage
-            '*.strapiapp.com', // For Strapi Cloud domains
-            'https:', // Allow all HTTPS images as fallback
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            "honorable-deer-e5062f6261.media.strapiapp.com",
+            "*.media.strapiapp.com",
           ],
-          'media-src': [
+          "media-src": [
             "'self'",
-            'data:',
-            'blob:',
-            'storage.googleapis.com',
-            '*.strapiapp.com',
-            'https:',
+            "data:",
+            "blob:",
+            "market-assets.strapi.io",
+            "honorable-deer-e5062f6261.media.strapiapp.com",
+            "*.media.strapiapp.com",
           ],
           upgradeInsecureRequests: null,
         },
       },
     },
   },
-  'strapi::cors',
-  'strapi::poweredBy',
-  'strapi::query',
-  'strapi::body',
-  'strapi::session',
-  'strapi::favicon',
-  'strapi::public',
+  "strapi::cors",
+  "strapi::poweredBy",
+  "strapi::query",
+  "strapi::body",
+  "strapi::session",
+  "strapi::favicon",
+  "strapi::public",
 ];
